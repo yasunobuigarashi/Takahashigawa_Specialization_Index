@@ -44,9 +44,8 @@
 
       // Set up the chart
       var chart = new Highcharts.Chart({
-         credits  : {
-            enabled: false,
-          },
+        credits  : {enabled: false},
+        exporting: {enabled: false},
         chart: {
               renderTo: 'container',
               margin: 100,
@@ -66,10 +65,7 @@
                   }
               }
           },
-          title: {
-              text: '全国66市町村 情報通信業 特化係数',
-
-          },
+          title: {text: ''},
 //          subtitle: {text: ''},
           plotOptions: {
               scatter: {
@@ -194,6 +190,7 @@
           {name: '宜野湾市',  data: [[ 0.81, 	0.45, 1.07]], color:'#808080', marker: {symbol: 'circle'}},
           {name: '浦添市',   data: [[ 0.53, 	0.46, 0.90]], color:'#808080', marker: {symbol: 'circle'}}
         ]
+
       });
 
       // Add mouse events for rotation
