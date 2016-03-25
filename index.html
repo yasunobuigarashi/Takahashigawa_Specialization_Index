@@ -21,6 +21,14 @@
 
   <body>
     <div id="container"></div>
+    <button id="button" class="autocompare">高梁川流域</button>
+    <button id="button" class="autocompare">岡山県内</button>
+    <button id="button" class="autocompare">北海道・東北</button>
+    <button id="button" class="autocompare">関東</button>
+    <button id="button" class="autocompare">中部</button>
+    <button id="button" class="autocompare">近畿</button>
+    <button id="button" class="autocompare">中国・四国</button>
+    <button id="button" class="autocompare">九州</button>
   </body>
 
   <script type="text/javascript">
@@ -54,7 +62,7 @@
               options3d: {
                   enabled: true,
                   alpha: 0,
-                  beta: 45,
+                  beta: 55,
                   depth: 250,
                   viewDistance: 5,
                   fitToPlot: false,
@@ -75,15 +83,15 @@
               }
           },
           yAxis: {
-            tickPositions: [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6],
+            tickPositions: [0, 0.2, 0.4, 0.6, 0.8, 1],
               min: 0,
-              max: 1.6,
+              max: 1,
               title: {text: 'y:労働生産性'}
           },
           xAxis: {
-              tickPositions: [0, 0.2, 0.4, 0.6, 0.8, 1],
+              tickPositions: [0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6],
               min: 0,
-              max: 1,
+              max: 1.6,
               title: {text: 'x:付加価値額'}
           },
           zAxis: {
