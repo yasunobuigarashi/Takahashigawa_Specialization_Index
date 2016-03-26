@@ -15,20 +15,24 @@
     height: 600px;
     width: 600px;
     margin: 0 auto;
+    position: relative; top: 50px;
   }
   </style>
 </head>
 
   <body>
+    <div style = "align:center">
+    <button id="button1" style="background-color:#FF0000; position: relative; top: 10px">高梁川流域</button>
+    <button id="button2" style="background-color:#00FF00; position: relative; top: 10px">岡山県内</button>
+    <button id="button3" style="background-color:#00FFFF; position: relative; top: 10px">北海道・東北</button>
+    <button id="button4" style="background-color:#0000FF; position: relative; top: 10px">関東</button>
+    <button id="button5" style="background-color:#FF00FF; position: relative; top: 10px">中部</button>
+    <button id="button6" style="background-color:#808000; position: relative; top: 10px">近畿</button>
+    <button id="button7" style="background-color:#800080; position: relative; top: 10px">中国・四国</button>
+    <button id="button8" style="background-color:#808080; position: relative; top: 10px">九州</button>
+  </div>
+
     <div id="container"></div>
-    <button id="button" class="autocompare">高梁川流域</button>
-    <button id="button" class="autocompare">岡山県内</button>
-    <button id="button" class="autocompare">北海道・東北</button>
-    <button id="button" class="autocompare">関東</button>
-    <button id="button" class="autocompare">中部</button>
-    <button id="button" class="autocompare">近畿</button>
-    <button id="button" class="autocompare">中国・四国</button>
-    <button id="button" class="autocompare">九州</button>
   </body>
 
   <script type="text/javascript">
@@ -100,15 +104,12 @@
               max: 2,
               title: {text: 'z:従業員数：事業所'}
           },
-          legend: {
-            itemStyle: {fontWeight: 'serif'},
-            align: 'center',
-            verticalAlign: 'bottom',
-          },
+          legend: {enabled:false},
+
           /*      高梁川流域    255, 0, 0    赤 #FF0000
                   岡山県内　    0, 255, 0    緑 #00FF00
-                  関東　       0, 0, 255    青 #0000FF
                   北海道・東北  0,255, 255   水色（シアン） #00FFFF
+                  関東　       0, 0, 255    青 #0000FF
                   中部        255, 0, 255   赤紫（マゼンタ） #FF00FF
                   近畿        128,128,0     黄土色 #808000
                   中国・四国   128,0,128     紫 #800080
@@ -231,6 +232,72 @@
               }
           });
       });
+
+      /* グループ単位での表示OFF/ON
+      /*  button1 高梁川流域:0-6
+          button2 岡山県内:7-12
+          button3 北海道・東北:13-18
+          button4 関東:19-24
+          button5 中部:25-34
+          button6 近畿:35-43
+          button7 中国・四国:44-53
+          button8 九州:54-65 */
+
+         $('#button1').click(function () {
+           var chart = $('#container').highcharts();
+           for(var i=0 ; i<=6 ; i++){
+             if (chart.series[i].visible) {chart.series[i].hide();} else {chart.series[i].show();}
+           }
+         });
+
+         $('#button2').click(function () {
+           var chart = $('#container').highcharts();
+           for(var i=7 ; i<=12 ; i++){
+             if (chart.series[i].visible) {chart.series[i].hide();} else {chart.series[i].show();}
+           }
+         });
+
+         $('#button3').click(function () {
+           var chart = $('#container').highcharts();
+           for(var i=13 ; i<=18 ; i++){
+             if (chart.series[i].visible) {chart.series[i].hide();} else {chart.series[i].show();}
+           }
+         });
+
+         $('#button4').click(function () {
+           var chart = $('#container').highcharts();
+           for(var i=19 ; i<=24 ; i++){
+             if (chart.series[i].visible) {chart.series[i].hide();} else {chart.series[i].show();}
+           }
+         });
+
+         $('#button5').click(function () {
+           var chart = $('#container').highcharts();
+           for(var i=25 ; i<=34 ; i++){
+             if (chart.series[i].visible) {chart.series[i].hide();} else {chart.series[i].show();}
+           }
+         });
+
+         $('#button6').click(function () {
+           var chart = $('#container').highcharts();
+           for(var i=35 ; i<=43 ; i++){
+             if (chart.series[i].visible) {chart.series[i].hide();} else {chart.series[i].show();}
+           }
+         });
+
+         $('#button7').click(function () {
+           var chart = $('#container').highcharts();
+           for(var i=44 ; i<=53 ; i++){
+             if (chart.series[i].visible) {chart.series[i].hide();} else {chart.series[i].show();}
+           }
+         });
+
+         $('#button8').click(function () {
+           var chart = $('#container').highcharts();
+           for(var i=54 ; i<=65 ; i++){
+             if (chart.series[i].visible) {chart.series[i].hide();} else {chart.series[i].show();}
+           }
+         });
 
   });
       </script>
